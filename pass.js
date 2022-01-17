@@ -13,8 +13,7 @@ inputPw.addEventListener('keyup', function (e) {
             console.log(code)
             console.log('Vous pouvez entrer !')
             video.setAttribute('src', './img/home-video-pw-2.webm')
-            video.removeAttribute('repeat')
-
+            inputPw.style.display = 'none'
         } else {
             console.log(inputPw.value)
             console.log(code)
