@@ -13,7 +13,16 @@ inputPw.addEventListener('keyup', function (e) {
             console.log(code)
             console.log('Vous pouvez entrer !')
             video.setAttribute('src', './img/home-video-pw-2.webm')
+            video.removeAttribute('loop')
             inputPw.style.display = 'none'
+
+            video.addEventListener('ended',myHandler,false);
+            function myHandler(e) {
+                // What you want to do after the event
+                console.log('video is over.');
+                video.remove()
+            }
+
         } else {
             console.log(inputPw.value)
             console.log(code)
